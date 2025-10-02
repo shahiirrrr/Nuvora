@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "src": "/category/.*",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/product/.*",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/cart",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/wishlist",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/checkout",
+      "dest": "/index.html"
+    }
+  ]
+}

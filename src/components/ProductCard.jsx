@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -95,15 +95,34 @@ const ProductCard = ({ product }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className={`relative overflow-hidden ${isListView ? 'aspect-[4/3] sm:rounded-l-lg' : 'aspect-[4/5] rounded-t-xl'} bg-gray-50`}>
-          <img 
-            src={product.image} 
-            alt={product.name}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = '/placeholder-product.jpg';
-            }}
-          />
+          <div className="relative h-full w-full overflow-hidden">
+            {/* Low-quality image placeholder (LQIP) */}
+            <img 
+              src={product.image} 
+              alt={product.name}
+              loading="lazy"
+              width={400}
+              height={500}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = '/placeholder-product.jpg';
+              }}
+              style={{
+                contentVisibility: 'auto',
+                backgroundColor: '#f5f5f5',
+                backgroundImage: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+                backgroundSize: '200% 100%',
+                animation: 'shimmer 1.5s infinite',
+              }}
+            />
+            <style jsx global>{`
+              @keyframes shimmer {
+                0% { background-position: -200% 0; }
+                100% { background-position: 200% 0; }
+              }
+            `}</style>
+          </div>
         
           {/* Quick Actions (Only shown in grid view on hover) */}
           {!isListView && (
