@@ -1,17 +1,66 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Star, ShoppingCart, Eye, ArrowRight, Loader2 } from 'lucide-react';
+import { Star, ShoppingCart, Eye, Loader2, Check } from 'lucide-react';
 import AddToWishlistButton from '@/components/AddToWishlistButton';
 import { useCart } from '@/contexts/CartContext';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, viewType = 'grid' }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const [isAddedToCart, setIsAddedToCart] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const { addToCart } = useCart();
+  
+  // Fixed height for card images
+  const imageHeight = viewType === 'list' ? '200px' : '300px';
+  
+  // Animation variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3, ease: 'easeOut' }
+    },
+    hover: { 
+      y: -5,
+      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      transition: { duration: 0.2 }
+    }
+  };
+  
+  const buttonVariants = {
+    initial: { opacity: 0, y: 10 },
+    hover: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.2 }
+    }
+  };
+  
+  const addToCartButtonVariants = {
+    initial: { width: 'auto' },
+    added: { 
+      width: 'auto',
+      backgroundColor: '#10B981',
+      transition: { duration: 0.3 }
+    }
+  };
+
+  // Generate a random discount between 10-30%
+  const discountPercentage = Math.floor(Math.random() * 21) + 10;
+  const originalPrice = (product.price * (1 + discountPercentage / 100)).toFixed(2);
+  const isListView = viewType === 'list';
+
+  const handleQuickView = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigate(`/category/${product.categoryId || 'living'}/${product.id}`);
+  };
 
   const handleAddToCart = async (e) => {
     e.stopPropagation();
@@ -27,8 +76,9 @@ const ProductCard = ({ product }) => {
         category: product.category || 'Living'
       }, 1);
       
-      // You can add a toast notification here if you want
-      // Example: toast.success('Added to cart!');
+      // Show success state
+      setIsAddedToCart(true);
+      setTimeout(() => setIsAddedToCart(false), 2000);
       
     } catch (err) {
       console.error('Error adding to cart:', err);
@@ -38,22 +88,14 @@ const ProductCard = ({ product }) => {
     }
   };
 
-  // Generate a random discount between 10-30%
-  const discountPercentage = Math.floor(Math.random() * 21) + 10;
-  const originalPrice = (product.price * (1 + discountPercentage / 100)).toFixed(2);
-
-  const handleQuickView = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    navigate(`/category/${product.categoryId || 'living'}/${product.id}`);
-  };
-
-  const isListView = product.viewType === 'list';
-
   return (
-    <div 
+    <motion.div 
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover={isListView ? {} : "hover"}
       className={`group relative overflow-hidden transition-all duration-300 hover:shadow-lg bg-white ${
-        isListView ? 'flex flex-col sm:flex-row rounded-lg' : 'rounded-xl'
+        isListView ? 'flex flex-col sm:flex-row rounded-lg' : 'rounded-xl h-full flex flex-col'
       }`}
     >
       {/* Badges */}
@@ -69,104 +111,95 @@ const ProductCard = ({ product }) => {
       </div>
 
       {/* Wishlist Button */}
-      <div className={`absolute right-2 top-2 z-10 ${isListView ? 'sm:relative sm:right-0 sm:top-0 sm:order-last sm:ml-4' : ''}`}>
-        <AddToWishlistButton 
-          product={{
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.image,
-            description: product.description,
-            categoryId: product.categoryId || 'living',
-            category: product.category,
-            rating: product.rating,
-            isNew: product.isNew
-          }}
-          variant="icon"
-          className="backdrop-blur-sm bg-white/80 hover:bg-white/90"
-        />
-      </div>
+      <motion.div 
+        className="absolute top-2 right-2 z-10"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ 
+          opacity: isHovered ? 1 : 0.8, 
+          scale: isHovered ? 1.1 : 1,
+          transition: { duration: 0.2 }
+        }}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <AddToWishlistButton product={product} />
+      </motion.div>
 
       {/* Product Image */}
       <Link 
         to={`/category/${product.categoryId || 'living'}/${product.id}`}
-        className={`block ${isListView ? 'sm:w-1/3' : ''}`}
+        className={`block ${isListView ? 'sm:w-1/3' : 'flex-1'}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className={`relative overflow-hidden ${isListView ? 'aspect-[4/3] sm:rounded-l-lg' : 'aspect-[4/5] rounded-t-xl'} bg-gray-50`}>
-          <div className="relative h-full w-full overflow-hidden">
-            {/* Low-quality image placeholder (LQIP) */}
-            <img 
-              src={product.image} 
+        <div className="relative w-full overflow-hidden" style={{ height: imageHeight, minHeight: imageHeight }}>
+          <div className="relative h-full w-full">
+            <img
+              src={product.image || '/placeholder-product.jpg'}
               alt={product.name}
-              loading="lazy"
-              width={400}
-              height={500}
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               onError={(e) => {
-                e.target.onerror = null;
+                // Fallback to placeholder if image fails to load
                 e.target.src = '/placeholder-product.jpg';
               }}
-              style={{
-                contentVisibility: 'auto',
-                backgroundColor: '#f5f5f5',
-                backgroundImage: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-                backgroundSize: '200% 100%',
-                animation: 'shimmer 1.5s infinite',
-              }}
             />
-            <style jsx global>{`
-              @keyframes shimmer {
-                0% { background-position: -200% 0; }
-                100% { background-position: 200% 0; }
-              }
-            `}</style>
           </div>
-        
-          {/* Quick Actions (Only shown in grid view on hover) */}
-          {!isListView && (
-            <div className={`absolute bottom-0 left-0 right-0 flex justify-center space-x-2 p-4 transition-all duration-300 ${
-              isHovered ? 'translate-y-0' : 'translate-y-full'
-            }`}>
-              <Button 
-                variant="secondary" 
-                size="sm" 
-                className="h-10 w-10 rounded-full p-0"
-                title="Quick View"
-                onClick={handleQuickView}
+          
+          {/* Quick Actions Overlay */}
+          <motion.div 
+            className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center p-4 pointer-events-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+          >
+            <motion.div 
+              className="flex gap-2"
+              variants={buttonVariants}
+              initial="initial"
+              animate={isHovered ? 'hover' : 'initial'}
+            >
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                <Button 
+                  variant="secondary" 
+                  size="icon" 
+                  className="rounded-full h-10 w-10 shadow-md"
+                  onClick={handleQuickView}
+                >
+                  <Eye className="h-4 w-4" />
+                </Button>
+              </motion.div>
+              
+              <motion.div 
+                variants={addToCartButtonVariants}
+                initial="initial"
+                animate={isAddedToCart ? 'added' : 'initial'}
+                className="bg-primary text-primary-foreground rounded-full overflow-hidden"
               >
-                <Eye className="h-4 w-4" />
-              </Button>
-              <Button 
-                onClick={handleAddToCart}
-                disabled={isAddingToCart}
-                size="sm" 
-                className="h-10 flex-1 gap-2"
-              >
-                {isAddingToCart ? (
-                  <>
+                <Button 
+                  variant={isAddedToCart ? 'default' : 'default'}
+                  size="default"
+                  className={`h-10 transition-all duration-300 ${isAddedToCart ? 'px-4' : 'w-10 p-0'}`}
+                  onClick={handleAddToCart}
+                  disabled={isAddingToCart || isAddedToCart}
+                >
+                  {isAddingToCart ? (
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    Adding...
-                  </>
-                ) : (
-                  <>
+                  ) : isAddedToCart ? (
+                    <div className="flex items-center gap-2">
+                      <Check className="h-4 w-4" />
+                      <span>Added</span>
+                    </div>
+                  ) : (
                     <ShoppingCart className="h-4 w-4" />
-                    Add to Cart
-                  </>
-                )}
-              </Button>
-            </div>
-          )}
+                  )}
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
-
-        {error && (
-          <p className="mt-2 text-xs text-red-500">{error}</p>
-        )}
       </Link>
 
       {/* Product Info */}
-      <div className={`p-4 ${isListView ? 'sm:flex-1' : ''}`}>
+      <div className={`p-4 ${isListView ? 'sm:flex-1' : 'flex-1 flex flex-col'}`}>
         <div className="mb-2 flex items-center">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
@@ -188,7 +221,7 @@ const ProductCard = ({ product }) => {
         <h3 className={`font-semibold text-gray-900 ${isListView ? 'text-xl mb-2' : 'text-lg mb-1'}`}>
           {product.name}
         </h3>
-        <p className={`${isListView ? 'mb-4' : 'mb-3'} line-clamp-2 text-sm text-gray-600`}>
+        <p className={`${isListView ? 'mb-4' : 'mb-3 flex-1'} line-clamp-2 text-sm text-gray-600`}>
           {product.description}
         </p>
 
@@ -202,41 +235,25 @@ const ProductCard = ({ product }) => {
             </span>
           </div>
 
-          <div className="flex space-x-2">
-            <Button 
-              variant={isListView ? 'outline' : 'default'}
-              size={isListView ? 'sm' : 'icon'}
-              onClick={handleAddToCart}
-              disabled={isAddingToCart}
-              className={`${isListView ? 'rounded-full' : 'rounded-full bg-black text-white hover:bg-gray-800'}`}
-            >
-              {isAddingToCart ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : isListView ? (
-                'Add to Cart'
-              ) : (
-                <ShoppingCart className="h-4 w-4" />
-              )}
-            </Button>
-            
-            {isListView && (
+          {!isListView && (
+            <div className="flex space-x-2">
               <Button 
                 variant="outline" 
                 size="sm" 
-                className="rounded-full"
+                className="rounded-full hidden sm:flex"
                 onClick={handleQuickView}
               >
                 <Eye className="mr-1 h-4 w-4" /> View
               </Button>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {error && (
           <p className="mt-2 text-xs text-red-500">{error}</p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

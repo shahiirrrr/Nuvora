@@ -59,7 +59,7 @@ const CategoryBanner = ({ category }) => {
 
   return (
     <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
-      <div className="relative h-64 md:h-96 overflow-hidden rounded-xl bg-gray-100">
+      <div className="relative h-64 md:h-96 overflow-hidden bg-gray-100">
         <picture>
           <source srcSet={banner.image.webp} type="image/webp" />
           <img
