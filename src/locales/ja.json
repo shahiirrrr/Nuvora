@@ -1,0 +1,434 @@
+{
+  "header": {
+    "logo": "ヌヴォラ",
+    "navLinks": {
+      "living": "リビング",
+      "dining": "ダイニング",
+      "bedroom": "ベッドルーム",
+      "decor": "デコレーション"
+    },
+    "button": {
+      "getStarted": "始めましょう"
+    }
+  },
+  "topbar": {
+    "message": "限定オファー！新規のお客様は20%オフ",
+    "cta": "今すぐ見る",
+    "dismiss": "閉じる"
+  },
+  "home": {
+    "hero": {
+      "title": "日常を彩る上質な暮らしを",
+      "subtitle": "時代を超えた家具、心地よいインテリア、モダンな生活雑貨で、お家をより素敵な空間に。",
+      "button": "今すぐ見る",
+      "exploreButton": "もっと見る",
+      "newCollection": "新作コレクション"
+    },
+    "categories": {
+      "collectionsTitle": "コレクション",
+      "sectionTitle": "カテゴリーから探す",
+      "sectionDescription": "こだわりの家具コレクションで、お部屋の魅力を引き出します。",
+      "shopNowButton": "今すぐ見る",
+      "living": {
+        "name": "リビング",
+        "description": "快適でスタイリッシュなリビングルームの家具"
+      },
+      "dining": {
+        "name": "ダイニング",
+        "description": "特別な食事のためのエレガントなダイニングセット"
+      },
+      "bedroom": {
+        "name": "ベッドルーム",
+        "description": "安らぎとスタイルを兼ね備えたベッドルームコレクション"
+      },
+      "decor": {
+        "name": "インテリア",
+        "description": "お部屋を引き立てる素敵なアクセント"
+      }
+    },
+    "testimonials": {
+      "title": "お客様の声",
+      "off": "オフ",
+      "subtitle": "お客様の声をお聞きください",
+      "description": "当社の製品を実際にご利用いただいたお客様の生の声です。",
+      "customer1": {
+        "name": "山田 太郎",
+        "role": "ご購入者様",
+        "quote": "家具の品質に大変満足しています。配達も迅速で、組み立ても簡単でした。"
+      },
+      "customer2": {
+        "name": "佐藤 花子",
+        "role": "リピーター様",
+        "quote": "何度か購入させていただいていますが、どれも素晴らしい品質です。"
+      },
+      "customer3": {
+        "name": "鈴木 一郎",
+        "role": "インテリアコーディネーター",
+        "quote": "モダンなデザインがお客様の家の雰囲気にぴったりです。"
+      }
+    },
+    "designInspiration": {
+      "title": "デザインインスピレーション",
+      "homeStylingTitle": "お部屋のスタイリングのヒント",
+      "homeStylingDescription": "最新のトレンドと専門家のアドバイスで、お部屋を素敵な空間に変えましょう。",
+      "colorGuide": {
+        "title": "カラーガイド",
+        "description": "専門家のアドバイスで、お部屋にぴったりのカラーパレットを見つけましょう。",
+        "cta": "ガイドを見る"
+      },
+      "diyProjects": {
+        "title": "DIYアイデア",
+        "description": "クリエイティブでお手頃なDIYプロジェクトでお部屋を変えてみませんか。",
+        "cta": "プロジェクトを見る"
+      },
+      "livingRoom": {
+        "title": "モダンなリビングルーム",
+        "description": "素敵なリビングルームのデザインとレイアウトのアイデアをご紹介します。",
+        "cta": "インスピレーションを得る"
+      }
+    },
+    "newsletter": {
+      "title": "初回ご注文10%オフ",
+      "description": "ニュースレターに登録して、新商品や特別オファー、デザインのインスピレーションをいち早くゲットしましょう。",
+      "emailPlaceholder": "メールアドレスを入力",
+      "subscribeButton": "登録する",
+      "privacyText": "プライバシーを尊重します。いつでも登録解除できます。",
+      "discountTitle": "10% OFF",
+      "discountSubtitle": "初回ご注文限定",
+      "discountDescription": "さらに、セール情報や新商品情報、デザインのヒントを特別にお届けします。"
+    },
+    "features": {
+      "sectionTitle": "特徴",
+      "cards": [
+        {
+          "title": "高速パフォーマンス",
+          "description": "稲妻のように速い速度とスムーズな操作を体験してください。"
+        },
+        {
+          "title": "安全",
+          "description": "高度なセキュリティ対策でデータを保護します。"
+        },
+        {
+          "title": "使いやすい",
+          "description": "直感的な操作のためのクリーンでモダンなインターフェース。"
+        }
+      ]
+    },
+    "tabs": {
+      "sectionTitle": "もっと詳しく",
+      "triggers": {
+        "analytics": "分析",
+        "collaboration": "コラボレーション",
+        "customization": "カスタマイズ"
+      },
+      "content": {
+        "analytics": {
+          "title": "分析",
+          "description": "詳細なインサイトを取得し、パフォーマンスを簡単に追跡できます。",
+          "button": "詳細を見る"
+        },
+        "collaboration": {
+          "title": "コラボレーション",
+          "description": "チームとシームレスにリアルタイムで作業できます。",
+          "button": "もっと詳しく"
+        },
+        "customization": {
+          "title": "カスタマイズ",
+          "description": "ワークフローに合わせてワークスペースを完全にパーソナライズできます。",
+          "button": "探す"
+        }
+      }
+    }
+  },
+  "cart": {
+    "title": "ショッピングカート",
+    "subtitle": "商品を確認してレジに進みましょう",
+    "emptyCart": {
+      "title": "カートに商品がありません",
+      "description": "カートに商品が追加されていません。",
+      "clear": "カートを空にする"
+    },
+    "remove": "削除",
+    "quantity": "数量",
+    "subtotal": "小計",
+    "checkout": "レジに進む",
+    "continueShopping": "買い物を続ける",
+    "orderSummary": "注文内容",
+    "shippingTaxes": "送料と税金はチェックアウト時に計算されます。",
+    "or": "または",
+    "loading": "カートを読み込み中...",
+    "itemRemoved": "商品をカートから削除しました",
+    "cartCleared": "カートを空にしました",
+    "error": {
+      "removeItem": "商品の削除に失敗しました",
+      "clearCart": "カートのクリアに失敗しました"
+    }
+  },
+  "about": {
+    "aboutSection": {
+      "title": "私たちについて",
+      "description": "私たちは、変化をもたらす革新的なソリューションを作り出すことに情熱を注ぐチームです。私たちの専門知識は複数の業界に及び、すべての取り組みにおいて卓越性を提供することを誓りにしています。"
+    },
+    "hero": {
+      "title": "会社概要",
+      "description": "私たちは、革新とチームワークを通じて卓越性を提供することに取り組んでいます。",
+      "button": "お問い合わせ"
+    },
+    "missionVisionValues": {
+      "mission": {
+        "title": "ミッション",
+        "description": "ビジネスと個人が成功するための革新的なソリューションを提供します。"
+      },
+      "vision": {
+        "title": "ビジョン",
+        "description": "革新性、品質、顧客満足度で認められるグローバルリーダーを目指します。"
+      },
+      "values": {
+        "title": "価値観",
+        "description": "誠実さ、協力、革新、顧客中心主義が私たちの行動指針です。"
+      }
+    },
+    "team": [
+      {
+        "name": "山田 花子",
+        "role": "CEO & 創業者",
+        "description": "情熱とビジョンを持って会社を率い、革新と成長を推進します。"
+      },
+      {
+        "name": "鈴木 太郎",
+        "role": "最高技術責任者",
+        "description": "技術戦略を監督し、最先端のソリューションを提供します。"
+      },
+      {
+        "name": "佐藤 さくら",
+        "role": "デザイン責任者",
+        "description": "ユーザー中心のデザインを実現するための戦略を主導します。"
+      }
+    ],
+    "cta": {
+      "title": "私たちの旅に参加しましょう",
+      "description": "革新、成長、協力を大切にするチームの一員になりましょう。",
+      "button": "お問い合わせ"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "おかえりなさい",
+      "subtitle": "アカウントにサインインしてください",
+      "formTitle": "アカウントにサインイン",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "forgotPassword": "パスワードをお忘れですか？",
+      "submit": "サインイン",
+      "divider": "または以下で続行",
+      "noAccount": "アカウントをお持ちでない場合",
+      "signUp": "新規登録"
+    },
+    "register": {
+      "title": "アカウントを作成",
+      "subtitle": "ご登録の上、お楽しみください",
+      "formTitle": "アカウントを作成",
+      "firstName": "名",
+      "lastName": "姓",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "passwordHint": "8文字以上で入力してください",
+      "confirmPassword": "パスワード（確認用）",
+      "terms": "利用規約とプライバシーポリシーに同意します",
+      "submit": "アカウントを作成",
+      "divider": "または以下で登録",
+      "haveAccount": "既にアカウントをお持ちの場合",
+      "signIn": "サインイン"
+    },
+    "social": {
+      "github": "GitHub",
+      "google": "Google"
+    },
+    "errors": {
+      "required": "この項目は必須です",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "passwordLength": "パスワードは8文字以上必要です",
+      "passwordMatch": "パスワードが一致しません"
+    }
+  },
+  "common": {
+    "backToHome": "ホームに戻る"
+  },
+  "category": {
+    "notFound": "カテゴリーが見つかりません",
+    "banners": {
+      "living": {
+        "title": "リビングルームコレクション",
+        "subtitle": "快適でスタイリッシュなリビングルームのための家具をご覧ください",
+        "buttonText": "今すぐ購入"
+      },
+      "dining": {
+        "title": "スタイリッシュなダイニング",
+        "subtitle": "当社のコレクションでダイニング体験を向上させましょう",
+        "buttonText": "コレクションを見る"
+      },
+      "bedroom": {
+        "title": "夢のベッドルーム",
+        "subtitle": "安らぎの空間をベッドルーム家具で作りましょう",
+        "buttonText": "ベッドルームを探す"
+      },
+      "decor": {
+        "title": "ホームデコレーション",
+        "subtitle": "お部屋を完璧に彩るアクセントを見つけましょう",
+        "buttonText": "デコレーションを探す"
+      },
+      "default": {
+        "title": "カテゴリーから探す",
+        "subtitle": "お部屋に合わせた厳選されたコレクションをご覧ください",
+        "buttonText": "すべて見る"
+      }
+    },
+    "productsFound": "{count} 商品が見つかりました",
+    "singleProduct": "商品",
+    "multipleProducts": "商品",
+    "filters": {
+      "title": "フィルター",
+      "sortBy": "並び替え:",
+      "filterAndSort": "フィルター & 並び替え",
+      "defaultSort": "おすすめ順",
+      "viewOptions": {
+        "grid": "グリッド表示",
+        "list": "リスト表示"
+      },
+      "noProducts": {
+        "title": "該当する商品がありません",
+        "description": "フィルターを調整して、お探しの商品を見つけてください。",
+        "clearFilters": "すべてのフィルターをクリア"
+      }
+    },
+    "sortOptions": {
+      "featured": "おすすめ順",
+      "newest": "新着順",
+      "priceLowToHigh": "価格の安い順",
+      "priceHighToLow": "価格の高い順",
+      "topRated": "評価の高い順"
+    }
+  },
+  "filters": {
+    "title": "フィルター",
+    "sortBy": "並び替え:",
+    "filterAndSort": "フィルター & 並び替え",
+    "defaultSort": "おすすめ順",
+    "viewOptions": {
+      "grid": "グリッド表示",
+      "list": "リスト表示"
+    },
+    "noProducts": {
+      "title": "該当する商品がありません",
+      "description": "フィルターを調整して、お探しの商品を見つけてください。",
+      "clearFilters": "すべてのフィルターをクリア"
+    },
+    "sortOptions": {
+      "featured": "おすすめ順",
+      "newest": "新着順",
+      "priceLowToHigh": "価格の安い順",
+      "priceHighToLow": "価格の高い順",
+      "topRated": "評価の高い順"
+    }
+  },
+  "wishlist": {
+    "title": "ウィッシュリスト",
+    "subtitle": "お気に入りの商品があなたを待っています",
+    "emptyTitle": "ウィッシュリストは空です",
+    "emptyMessage": "ウィッシュリストに商品が追加されていません。",
+    "continueShopping": "買い物を続ける",
+    "removeItem": "削除",
+    "clearAll": "すべて削除",
+    "addToCart": "カートに追加",
+    "viewProduct": "商品を見る",
+    "loading": "ウィッシュリストを読み込み中...",
+    "itemRemoved": "商品をウィッシュリストから削除しました",
+    "wishlistCleared": "ウィッシュリストを空にしました",
+    "addedToCart": "カートに追加しました",
+    "error": {
+      "removeItem": "商品の削除に失敗しました",
+      "clearAll": "ウィッシュリストのクリアに失敗しました",
+      "addToCart": "カートへの追加に失敗しました"
+    }
+  },
+  "search": {
+    "title": "理想のアイテムを見つけよう",
+    "subtitle": "厳選されたプレミアムな家具とホームデコレーションのコレクションをご覧ください。",
+    "placeholder": "家具、インテリア、その他を検索...",
+    "ariaLabel": "商品を検索",
+    "searchButton": "検索",
+    "results": {
+      "title": "\"{query}\"の検索結果",
+      "itemsFound": "{count}件の商品が見つかりました",
+      "noResults": {
+        "title": "検索結果がありません",
+        "message": "\"{query}\"に一致する商品が見つかりませんでした。スペルを確認するか、別のキーワードでお試しください。",
+        "button": "検索をクリア"
+      },
+      "suggestions": {
+        "title": "何をお探しですか？",
+        "message": "家具、インテリア、生活雑貨などを検索できます。例: \"ソファ\"、\"ダイニングテーブル\"、\"ベッドルームセット\"",
+        "popularSearches": ["ソファ", "ダイニングセット", "ベッド", "照明", "収納", "インテリア小物"]
+      }
+    }
+  },
+  "footer": {
+    "description": "スタイル、快適さ、機能性を兼ね備えたモダンでサステナブルな家具で空間を演出します。",
+    "quickLinksTitle": "クイックリンク",
+    "contactTitle": "お問い合わせ",
+    "address": "〒100-0001\n東京都千代田区デザインストリート123",
+    "email": "info@nuvora.com",
+    "phone": "03-1234-5678",
+    "newsletter": {
+      "title": "ニュースレターを購読する",
+      "description": "新商品、特別オファー、デザインインスピレーションの最新情報を購読する。",
+      "placeholder": "メールアドレスを入力",
+      "button": "購読する"
+    },
+    "copyright": {
+      "text": "ヌヴォラ",
+      "rights": "All rights reserved.",
+      "rights_ja": "すべての権利を保有",
+      "year": "{year}年"
+    },
+    "socialMedia": [
+      {
+        "name": "フェイスブック",
+        "icon": "Facebook",
+        "href": "https://facebook.com"
+      },
+      {
+        "name": "ツイッター",
+        "icon": "Twitter",
+        "href": "https://twitter.com"
+      },
+      {
+        "name": "インスタグラム",
+        "icon": "Instagram",
+        "href": "https://instagram.com"
+      }
+    ],
+    "quickLinks": [
+      {
+        "label": "会社概要",
+        "href": "/about"
+      },
+      {
+        "label": "商品一覧",
+        "href": "/products"
+      },
+      {
+        "label": "ブログ",
+        "href": "/blog"
+      },
+      {
+        "label": "よくある質問",
+        "href": "/faq"
+      },
+      {
+        "label": "お問い合わせ",
+        "href": "/contact"
+      }
+    ]
+  }
+}

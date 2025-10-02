@@ -1,0 +1,354 @@
+  {
+  "header": {
+    "logo": "Nuvora",
+    "navLinks": {
+      "living": "Living",
+      "dining": "Dining",
+      "bedroom": "Bedroom",
+      "decor": "Decor"
+    },
+    "button": {
+      "getStarted": "Get Started"
+    }
+  },
+  "topbar": {
+    "message": "Exclusive offer! 20% off for new customers.",
+    "cta": "Shop now",
+    "dismiss": "Dismiss"
+  },
+  "home": {
+    "hero": {
+      "title": "Elevate Your Everyday Living",
+      "subtitle": "Discover timeless furniture, cozy decor, and modern essentials that turn your house into a home.",
+      "button": "Shop Now",
+      "exploreButton": "Explore More",
+      "newCollection": "NEW COLLECTION"
+    },
+    "categories": {
+      "collectionsTitle": "OUR COLLECTIONS",
+      "sectionTitle": "Shop by Category",
+      "sectionDescription": "Discover our curated selection of premium furniture collections designed to elevate every space in your home.",
+      "shopNowButton": "Shop Now",
+      "living": {
+        "name": "Living",
+        "description": "Comfortable and stylish furniture for your living space"
+      },
+      "dining": {
+        "name": "Dining",
+        "description": "Elegant dining sets for memorable meals"
+      },
+      "bedroom": {
+        "name": "Bedroom",
+        "description": "Restful and stylish bedroom collections"
+      },
+      "decor": {
+        "name": "Decor",
+        "description": "Beautiful accents to complete your home"
+      }
+    },
+    "testimonials": {
+      "title": "TESTIMONIALS",
+      "off": "off",
+      "subtitle": "What Our Customers Say",
+      "description": "Don't just take our word for it. Here's what our customers have to say about their Nuvora experience.",
+      "customer1": {
+        "name": "John D.",
+        "role": "Verified Buyer",
+        "quote": "The quality of furniture exceeded my expectations. The delivery was prompt and the assembly was a breeze. Highly recommended!"
+      },
+      "customer2": {
+        "name": "Amanda S.",
+        "role": "Loyal Customer",
+        "quote": "I've purchased multiple items from Nuvora and each one has been exceptional. Their customer service is outstanding!"
+      },
+      "customer3": {
+        "name": "Michael R.",
+        "role": "Interior Designer",
+        "quote": "The modern design of their furniture perfectly matches my home's aesthetic. I get compliments from every guest!"
+      }
+    },
+    "designInspiration": {
+      "title": "DESIGN INSPIRATION",
+      "homeStylingTitle": "Home Styling Tips",
+      "homeStylingDescription": "Discover the latest trends and expert advice to transform your living spaces into stunning, functional areas.",
+      "colorGuide": {
+        "title": "Ultimate Color Guide",
+        "description": "Discover the perfect color palette to transform your living spaces with our expert guide.",
+        "cta": "Explore Guide"
+      },
+      "diyProjects": {
+        "title": "Creative DIY Ideas",
+        "description": "Transform your space with these creative and affordable do-it-yourself home projects.",
+        "cta": "View Projects"
+      },
+      "livingRoom": {
+        "title": "Modern Living Room Ideas",
+        "description": "Get inspired with our curated collection of stunning living room designs and layouts.",
+        "cta": "Get Inspired"
+      }
+    },
+    "newsletter": {
+      "title": "Get 10% Off Your First Order",
+      "description": "Subscribe to our newsletter and be the first to know about new arrivals, exclusive offers, and design inspiration.",
+      "emailPlaceholder": "Enter your email",
+      "subscribeButton": "Subscribe",
+      "privacyText": "We respect your privacy. Unsubscribe at any time.",
+      "discountTitle": "10% OFF",
+      "discountSubtitle": "Your First Order",
+      "discountDescription": "Plus, get exclusive access to sales, new arrivals, and design tips."
+    },
+    "features": {
+      "sectionTitle": "Our Features",
+      "cards": [
+        {
+          "title": "Fast Performance",
+          "description": "Experience lightning-fast speed and smooth interactions."
+        },
+        {
+          "title": "Secure",
+          "description": "Your data is safe with advanced security measures."
+        },
+        {
+          "title": "User Friendly",
+          "description": "Clean and modern interface for an intuitive experience."
+        }
+      ]
+    },
+    "tabs": {
+      "sectionTitle": "Explore More",
+      "triggers": {
+        "analytics": "Analytics",
+        "collaboration": "Collaboration",
+        "customization": "Customization"
+      },
+      "content": {
+        "analytics": {
+          "title": "Analytics",
+          "description": "Get detailed insights and track your performance easily.",
+          "button": "View Details"
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "Work seamlessly with your team in real-time.",
+          "button": "Learn More"
+        },
+        "customization": {
+          "title": "Customization",
+          "description": "Fully personalize your workspace to fit your workflow.",
+          "button": "Explore"
+        }
+      }
+    }
+  },
+
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access your account",
+      "formTitle": "Sign in to your account",
+      "email": "Email address",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign in",
+      "divider": "Or continue with",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create an Account",
+      "subtitle": "Join us and start your journey",
+      "formTitle": "Create your account",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "password": "Password",
+      "passwordHint": "Must be at least 8 characters long",
+      "confirmPassword": "Confirm password",
+      "terms": "I agree to the Terms of Service and Privacy Policy",
+      "submit": "Create account",
+      "divider": "Or sign up with",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "social": {
+      "github": "GitHub",
+      "google": "Google"
+    },
+    "errors": {
+      "required": "This field is required",
+      "emailInvalid": "Please enter a valid email address",
+      "passwordLength": "Password must be at least 8 characters",
+      "passwordMatch": "Passwords do not match"
+    }
+  },
+  "wishlist": {
+    "title": "Your Wishlist",
+    "subtitle": "Your saved items are waiting for you",
+    "emptyTitle": "Your wishlist is empty",
+    "emptyMessage": "You haven't added any products to your wishlist yet.",
+    "continueShopping": "Continue Shopping",
+    "removeItem": "Remove item",
+    "clearAll": "Clear All",
+    "addToCart": "Add to Cart",
+    "viewProduct": "View Product",
+    "loading": "Loading your wishlist...",
+    "itemRemoved": "Item removed from wishlist",
+    "wishlistCleared": "Wishlist cleared",
+    "addedToCart": "Added to cart",
+    "error": {
+      "removeItem": "Failed to remove item",
+      "clearAll": "Failed to clear wishlist",
+      "addToCart": "Failed to add to cart"
+    }
+  },
+  "search": {
+    "title": "Find Your Perfect Piece",
+    "subtitle": "Discover our curated collection of premium furniture and home decor.",
+    "placeholder": "Search for furniture, decor, and more...",
+    "ariaLabel": "Search products",
+    "searchButton": "Search",
+    "results": {
+      "title": "Search results for \"{query}\"",
+      "itemsFound": "{count} {count, plural, one{item} other{items}} found",
+      "noResults": {
+        "title": "No results found",
+        "message": "We couldn't find any products matching \"{query}\". Try checking your spelling or using different keywords.",
+        "button": "Clear search"
+      },
+      "suggestions": {
+        "title": "What are you looking for?",
+        "message": "Search for furniture, decor, or any home essentials. Try terms like \"sofa\", \"dining table\", or \"bedroom set\".",
+        "popularSearches": ["Sofas", "Dining Sets", "Beds", "Lighting", "Storage", "Decor"]
+      }
+    }
+  },
+  "footer": {
+    "description": "Elevating spaces with modern, sustainable furniture that combines style, comfort, and functionality.",
+    "quickLinksTitle": "Quick Links",
+    "contactTitle": "Contact Us",
+    "address": "123 Design Street\nCreative City, 10001",
+    "email": "info@nuvora.com",
+    "phone": "+1 (555) 123-4567",
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to get updates on new arrivals, exclusive offers, and design inspiration.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    },
+    "copyright": {
+      "text": "NUVORA",
+      "rights": "All rights reserved.",
+      "year": "{year}"
+    },
+    "socialMedia": [
+      {
+        "name": "Facebook",
+        "icon": "Facebook",
+        "href": "https://facebook.com"
+      },
+      {
+        "name": "Twitter",
+        "icon": "Twitter",
+        "href": "https://twitter.com"
+      },
+      {
+        "name": "Instagram",
+        "icon": "Instagram",
+        "href": "https://instagram.com"
+      }
+    ],
+    "quickLinks": [
+      {
+        "label": "About Us",
+        "href": "/about"
+      },
+      {
+        "label": "Our Products",
+        "href": "/products"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      },
+      {
+        "label": "FAQs",
+        "href": "/faq"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "cart": {
+    "title": "Your Cart",
+    "subtitle": "Review your items and proceed to checkout",
+    "emptyCart": {
+      "title": "Your cart is empty",
+      "description": "Looks like you haven't added anything to your cart yet.",
+      "clear": "Clear cart"
+    },
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to Checkout",
+    "continueShopping": "Continue Shopping",
+    "orderSummary": "Order Summary",
+    "shippingTaxes": "Shipping and taxes calculated at checkout.",
+    "or": "or",
+    "loading": "Loading your cart...",
+    "itemRemoved": "Item removed from cart",
+    "cartCleared": "Cart cleared",
+    "error": {
+      "removeItem": "Failed to remove item",
+      "clearCart": "Failed to clear cart"
+    }
+  },
+  "about": {
+    "aboutSection": {
+      "title": "Who We Are",
+      "description": "We are a passionate team dedicated to creating innovative solutions that make a difference. Our expertise spans multiple industries, and we pride ourselves on delivering excellence in everything we do."
+    },
+    "hero": {
+      "title": "About Our Company",
+      "description": "We are committed to delivering excellence through innovation and teamwork.",
+      "button": "Contact Us"
+    },
+    "missionVisionValues": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To provide innovative solutions that empower businesses and individuals to succeed."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To become a global leader recognized for innovation, quality, and customer satisfaction."
+      },
+      "values": {
+        "title": "Our Values",
+        "description": "Integrity, collaboration, innovation, and customer-centricity guide everything we do."
+      }
+    },
+    "team": [
+      {
+        "name": "Jane Doe",
+        "role": "CEO & Founder",
+        "description": "Jane leads our company with passion and vision, driving innovation and growth."
+      },
+      {
+        "name": "John Smith",
+        "role": "CTO",
+        "description": "John oversees technology strategy and ensures our solutions are cutting-edge."
+      },
+      {
+        "name": "Emily Johnson",
+        "role": "Head of Marketing",
+        "description": "Emily manages branding and marketing initiatives, connecting us with our audience."
+      }
+    ],
+    "cta": {
+      "title": "Join Us on Our Journey",
+      "description": "Be part of a team that values innovation, growth, and collaboration.",
+      "button": "Contact Us"
+    }
+  }
+}

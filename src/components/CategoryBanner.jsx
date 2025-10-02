@@ -1,0 +1,77 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+const CategoryBanner = ({ category }) => {
+  const { translations } = useLanguage();
+  
+  const banners = {
+    living: {
+      title: translations.category?.banners?.living?.title || 'Living Room Collection',
+      subtitle: translations.category?.banners?.living?.subtitle || 'Discover comfort and style for your living space',
+      image: '/src/assets/images/category/banner-living.jpg',
+      buttonText: translations.category?.banners?.living?.buttonText || 'Shop Now',
+      position: 'left'
+    },
+    dining: {
+      title: translations.category?.banners?.dining?.title || 'Dining in Style',
+      subtitle: translations.category?.banners?.dining?.subtitle || 'Elevate your dining experience with our collection',
+      image: '/src/assets/images/category/banner-dining.jpg',
+      buttonText: translations.category?.banners?.dining?.buttonText || 'View Collection',
+      position: 'right'
+    },
+    bedroom: {
+      title: translations.category?.banners?.bedroom?.title || 'Your Dream Bedroom',
+      subtitle: translations.category?.banners?.bedroom?.subtitle || 'Create a peaceful retreat with our bedroom furniture',
+      image: '/src/assets/images/category/banner-bedroom.jpg',
+      buttonText: translations.category?.banners?.bedroom?.buttonText || 'Shop Bedroom',
+      position: 'left'
+    },
+    decor: {
+      title: translations.category?.banners?.decor?.title || 'Home Decor',
+      subtitle: translations.category?.banners?.decor?.subtitle || 'Find the perfect accents to complete your space',
+      image: '/src/assets/images/category/banner-decor.jpg',
+      buttonText: translations.category?.banners?.decor?.buttonText || 'Explore Decor',
+      position: 'right'
+    },
+    default: {
+      title: translations.category?.banners?.default?.title || 'Shop by Category',
+      subtitle: translations.category?.banners?.default?.subtitle || 'Discover our curated collections for every room in your home',
+      image: '/src/assets/images/category/category-banner.jpg',
+      buttonText: translations.category?.banners?.default?.buttonText || 'Explore All',
+      position: 'center'
+    }
+  };
+
+  const banner = category ? banners[category] || banners.default : banners.default;
+  const isCentered = banner.position === 'center';
+
+  return (
+    <div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center transition-all duration-500 hover:scale-105"
+        style={{ backgroundImage: `url(${banner.image})` }}
+      >
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
+      <div className={`relative z-10 h-full flex ${isCentered ? 'items-center justify-center text-center' : 'items-center'} p-8 md:p-12`}>
+        <div className={`max-w-2xl ${isCentered ? 'mx-auto' : ''}`}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
+            {banner.title}
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-6">
+            {banner.subtitle}
+          </p>
+          <Button asChild size="lg" className="bg-white text-black hover:bg-white/90">
+            <Link to={category ? `/category/${category}` : '/category'}>
+              {banner.buttonText}
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CategoryBanner;
